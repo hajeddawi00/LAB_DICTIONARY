@@ -33,20 +33,21 @@ def query_weather_data(city:str):
 
 while True:
     try:
-        while True:
-            print("\n1. Input Weather Data\n2. Query by City\n3. Exit")
-            choice = int(input("Enter your choice: "))
-            if choice == 1:
-                city = input('Please Enter The City Name: ')
-                input_data(city)
-            elif choice == 2:
-                city = input('Please Enter The City Name: ')
-                query_weather_data(city)
-            elif choice == 3:
-                print('Exiting from the program...')
-                break
-            else:
-                print('Enter a valid number: ')
+        print("\n1. Input Weather Data\n2. Query by City\n3. Exit")
+        choice = int(input("Enter your choice: "))
+        if choice == 1:
+            city = input('Please Enter The City Name: ')
+            input_data(city)
+        elif choice == 2:
+            city = input('Please Enter The City Name: ')
+            query_weather_data(city)
+        elif choice == 3:
+            print('Exiting from the program...')
+            break  # Corrected indentation
+        else:
+            print('Enter a valid number: ')
     except ValueError:
-        print('You enter a wrong inputs. Try again')
+        print('You entered an invalid input. Please try again.')
+
+
         
